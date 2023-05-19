@@ -1,0 +1,214 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:EventList.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="600"
+		Height="1024" Width="1024"
+        x:Class="EventList.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="ListOfEvents"
+		xmlns:localM="clr-namespace:EventList.Models">
+
+	<Design.DataContext>
+		<vm:MainWindowViewModel/>
+	</Design.DataContext>
+
+	<Window.Resources>
+		<vm:BitmapAssetValueConverter x:Key="variableImage"/>
+	</Window.Resources>
+	<Window.Styles>
+		<Style Selector="Image.Head">
+			<Setter Property="Height" Value="50"/>
+			<Setter Property="Width" Value="50"/>
+		</Style>
+		<Style Selector="Image.NotHead">
+			<Setter Property="Height" Value="150"/>
+			<Setter Property="Width" Value="150"/>
+		</Style>
+		<Style Selector="TextBlock.NotHeadText">
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="TextWrapping" Value="Wrap"/>
+		</Style>
+		<Style Selector="Border.B">
+			<Setter Property="BorderBrush" Value="Black"/>
+			<Setter Property="BorderThickness" Value="4"/>
+			<Setter Property="CornerRadius" Value="3"/>
+			<Setter Property="Padding" Value="3"/>	
+		</Style>	
+	</Window.Styles>
+		
+	<Window.DataTemplates>
+		<DataTemplate DataType="{x:Type localM:Events}">
+			<Border Classes="B">
+				<Grid ColumnDefinitions="*" RowDefinitions="*, *" Height="400" Width="400">
+					<Image Grid.Row="0" Source="{Binding ImagePath,  Converter={StaticResource variableImage}}" Classes="NotHead" />
+					<StackPanel Grid.Row="1">
+						<TextBlock Text="{Binding Name}" Classes="NotHeadText"/>
+						<TextBlock Text="{Binding Description}" Classes="NotHeadText"/>
+						<TextBlock Text="{Binding Date}" Classes="NotHeadText"/>
+						<TextBlock Text="{Binding Price}" Classes="NotHeadText"/>
+					</StackPanel>
+				</Grid>
+			</Border>
+		</DataTemplate>
+	</Window.DataTemplates>
+
+	<TabControl>
+		<TabItem>
+			<TabItem.Header >
+				<Border Classes="B">
+					<Grid ColumnDefinitions="0.2*, 0.8*">
+						<Image Grid.Column="0"  Source="/Assets/pic/Kids.png" Classes="Head"/>
+						<TextBlock Text="Для Детей" Grid.Column="1"/>
+					</Grid>
+				</Border>
+			</TabItem.Header>
+			<ItemsControl Items="{Binding Kid}">
+				<ItemsControl.ItemsPanel>
+					<ItemsPanelTemplate>
+						<WrapPanel/>
+					</ItemsPanelTemplate>
+				</ItemsControl.ItemsPanel>
+			</ItemsControl>
+		</TabItem>
+		<TabItem>
+			<TabItem.Header>
+				<Border Classes="B">
+					<Grid ColumnDefinitions="0.2*, 0.8*">
+						<Image Grid.Column="0"  Source="/Assets/pic/Sport.png" Classes="Head"/>
+						<TextBlock Text="Спорт" Grid.Column="1"/>
+					</Grid>
+				</Border>
+			</TabItem.Header>
+			<ItemsControl Items="{Binding SporT}">
+				<ItemsControl.ItemsPanel>
+					<ItemsPanelTemplate>
+						<WrapPanel/>
+					</ItemsPanelTemplate>
+				</ItemsControl.ItemsPanel>
+			</ItemsControl>
+		</TabItem>
+		<TabItem>
+			<TabItem.Header>
+				<Border Classes="B">
+					<Grid ColumnDefinitions="0.2*, 0.8*">
+						<Image Grid.Column="0"  Source="/Assets/pic/Culture.png" Classes="Head"/>
+						<TextBlock Text="Культура" Grid.Column="1"/>
+					</Grid>
+				</Border>
+			</TabItem.Header>
+			<ItemsControl Items="{Binding CulturE}">
+				<ItemsControl.ItemsPanel>
+					<ItemsPanelTemplate>
+						<WrapPanel/>
+					</ItemsPanelTemplate>
+				</ItemsControl.ItemsPanel>
+			</ItemsControl>
+		</TabItem>
+		<TabItem>
+			<TabItem.Header>
+				<Border Classes="B">
+					<Grid ColumnDefinitions="0.2*, 0.8*">
+						<Image Grid.Column="0"  Source="/Assets/pic/Excursions.png" Classes="Head"/>
+						<TextBlock Text="Экскурсии" Grid.Column="1"/>
+					</Grid>
+				</Border>
+			</TabItem.Header>
+			<ItemsControl Items="{Binding ExcursionS}">
+				<ItemsControl.ItemsPanel>
+					<ItemsPanelTemplate>
+						<WrapPanel/>
+					</ItemsPanelTemplate>
+				</ItemsControl.ItemsPanel>
+			</ItemsControl>
+		</TabItem>
+		<TabItem>
+			<TabItem.Header>
+				<Border Classes="B">
+					<Grid ColumnDefinitions="0.2*, 0.8*">
+						<Image Grid.Column="0"  Source="/Assets/pic/Lifestyle.png" Classes="Head"/>
+						<TextBlock Text="Образ Жизни" Grid.Column="1"/>
+					</Grid>
+				</Border>		
+			</TabItem.Header>
+			<ItemsControl Items="{Binding LifestylE}">
+				<ItemsControl.ItemsPanel>
+					<ItemsPanelTemplate>
+						<WrapPanel/>
+					</ItemsPanelTemplate>
+				</ItemsControl.ItemsPanel>
+			</ItemsControl>
+		</TabItem>
+		<TabItem>
+			<TabItem.Header>
+				<Border Classes="B">
+					<Grid ColumnDefinitions="0.2*, 0.8*">
+						<Image Grid.Column="0"  Source="/Assets/pic/Education.png" Classes="Head"/>
+						<TextBlock Text="Образование" Grid.Column="1"/>
+					</Grid>
+				</Border>
+			</TabItem.Header>
+			<ItemsControl Items="{Binding EducatioN}">
+				<ItemsControl.ItemsPanel>
+					<ItemsPanelTemplate>
+						<WrapPanel/>
+					</ItemsPanelTemplate>
+				</ItemsControl.ItemsPanel>
+			</ItemsControl>
+		</TabItem>
+		<TabItem>
+			<TabItem.Header>
+				<Border Classes="B">
+					<Grid ColumnDefinitions="0.2*, 0.8*">
+						<Image Grid.Column="0"  Source="/Assets/pic/Party.png" Classes="Head"/>
+						<TextBlock Text="Вечеринки" Grid.Column="1"/>
+					</Grid>
+				</Border>
+			</TabItem.Header>
+			<ItemsControl Items="{Binding PartY}">
+				<ItemsControl.ItemsPanel>
+					<ItemsPanelTemplate>
+						<WrapPanel/>
+					</ItemsPanelTemplate>
+				</ItemsControl.ItemsPanel>
+			</ItemsControl>
+		</TabItem>
+		<TabItem>
+			<TabItem.Header>
+				<Border Classes="B">
+					<Grid ColumnDefinitions="0.2*, 0.8*">
+						<Image Grid.Column="0"  Source="/Assets/pic/Online.png" Classes="Head"/>
+						<TextBlock Text="Онлайн" Grid.Column="1"/>
+					</Grid>
+				</Border>
+			</TabItem.Header>
+			<ItemsControl Items="{Binding OnlinE}">
+				<ItemsControl.ItemsPanel>
+					<ItemsPanelTemplate>
+						<WrapPanel/>
+					</ItemsPanelTemplate>
+				</ItemsControl.ItemsPanel>
+			</ItemsControl>
+		</TabItem>
+		<TabItem>
+			<TabItem.Header>
+				<Border Classes="B">
+					<Grid ColumnDefinitions="0.2*, 0.8*">
+						<Image Grid.Column="0"  Source="/Assets/pic/Show.png" Classes="Head"/>
+						<TextBlock Text="Шоу" Grid.Column="1"/>
+					</Grid>
+				</Border>
+			</TabItem.Header>
+			<ItemsControl Items="{Binding ShoW}">
+				<ItemsControl.ItemsPanel>
+					<ItemsPanelTemplate>
+						<WrapPanel/>
+					</ItemsPanelTemplate>
+				</ItemsControl.ItemsPanel>
+			</ItemsControl>
+		</TabItem>
+	</TabControl>
+
+
+</Window>

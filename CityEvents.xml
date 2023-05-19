@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CityEvents>
+	<Event name="Хоккейный Матч">
+		<Header>Хоккейный Матч</Header>
+		<Description>Матч между Сибирию и Авангардом</Description>
+		<Image>Assets/picpic/hockey.png</Image>
+		<Date>04.03.2023 14:00</Date>
+		<Price>450-1350 рублей</Price>
+		<Category>
+			<CategotyItem>Спорт</CategotyItem>
+			<CategotyItem>Шоу</CategotyItem>
+			<CategotyItem>Образ Жизни</CategotyItem>
+		</Category>
+	</Event>
+	<Event name="Зарница">
+		<Header>Зарница</Header>
+		<Description>Традиционное спортивно-оздоровиттельное мероприятие приуроченное ко Дню Победы 9 маяю На нём вы позанимаетесь многими интересными активностями в том числе: прохождениеу военной полосы препядствий, стрельба из винтовки. Кроме того вас ждёт настоящая полевая кухня с ароматной гречкой и горячим чаем</Description>
+		<Image>Assets/picpic/Zarnica.png</Image>
+		<Date>09.05.2023 10:00</Date>
+		<Price>Беспалтно</Price>
+		<Category>
+			<CategotyItem>Спорт</CategotyItem>
+			<CategotyItem>Образ Жизни</CategotyItem>
+			<CategotyItem>Для Детей</CategotyItem>
+			<CategotyItem>Культура</CategotyItem>
+		</Category>
+	</Event>
+	<Event name="Онлайн Тренировка">
+		<Header>Онлайн Тренировка</Header>
+		<Description>Онлайн зарядка с известным фитнес тренером</Description>
+		<Image>Assets/picpic/OnlineTrainig.png</Image>
+		<Date>29.03.2023 08:00</Date>
+		<Price>1000-2500 рублей</Price>
+		<Category>
+			<CategotyItem>Спорт</CategotyItem>
+			<CategotyItem>Образ Жизни</CategotyItem>
+			<CategotyItem>Онлайн</CategotyItem>
+			<CategotyItem>Для Детей</CategotyItem>
+		</Category>
+	</Event>
+	<Event name="Онлайн экскурсия по Оперному театру">
+		<Header>Онлайн экскурсия по Оперному театру</Header>
+		<Description>Покажем и расскажем как производится балет, заглянем за кулисы и покажем настоящую репетицию </Description>
+		<Image>Assets/picpic/Theatre.png</Image>
+		<Date>05.04.2023 15:00</Date>
+		<Price>5000 рублей</Price>
+		<Category>
+			<CategotyItem>Культура</CategotyItem>
+			<CategotyItem>Экскурсии</CategotyItem>
+			<CategotyItem>Онлайн</CategotyItem>
+			<CategotyItem>Образование</CategotyItem>
+		</Category>
+	</Event>
+	<Event name="Подкаст с Михаилом">
+		<Header>Подкаст с Михаилом</Header>
+		<Description>Гуляя по городу, поговорим о насущнем с Михаилом, расскажем о достопримечательностях</Description>
+		<Image>Assets/picpic/Walking.png</Image>
+		<Date>29.02.2023 06:00</Date>
+		<Price>Бесплатно</Price>
+		<Category>
+			<CategotyItem>Культура</CategotyItem>
+			<CategotyItem>Экскурсии</CategotyItem>
+			<CategotyItem>Онлайн</CategotyItem>
+			<CategotyItem>Образование</CategotyItem>
+			<CategotyItem>Шоу</CategotyItem>
+		</Category>
+	</Event>
+	<Event name="Образовательная вечеринка IT">
+		<Header>Образовательная вечеринка IT</Header>
+		<Description>В игровом формате расскажем о самых востребованных профессиях IT, всё это играя в настолки</Description>
+		<Image>Assets/picpic/IT.png</Image>
+		<Date>01.05.2023 21:00</Date>
+		<Price>Бесплатно</Price>
+		<Category>
+			<CategotyItem>Онлайн</CategotyItem>
+			<CategotyItem>Образование</CategotyItem>
+			<CategotyItem>Вечеринки</CategotyItem>
+		</Category>
+	</Event>
+	<Event name="Концерт">
+		<Header>Концерт</Header>
+		<Description>Концерт кис-кис в Подземке</Description>
+		<Image>Assets/picpic/kiskis.jpg</Image>
+		<Date>31.05.2023 23:00</Date>
+		<Price>5к рублей</Price>
+		<Category>
+			<CategotyItem>Вечеринки</CategotyItem>
+			<CategotyItem>Шоу</CategotyItem>
+		</Category>
+	</Event>
+</CityEvents>
+
+<!-- 
+Для Детей 3
+Спорт 3
+Культура 3
+Экскурсия 2 
+Образ Жизни 3
+Образование 3
+Вечеринки 2 
+Онлайн 4
+Шоу 3
+-->
